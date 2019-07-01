@@ -6,6 +6,5 @@ def euler001
 			sum +=item 
 		end
 	}
-	puts sum
+	sum
 end
-puts euler001

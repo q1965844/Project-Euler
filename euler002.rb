@@ -11,6 +11,5 @@ def euler002
             x = y
             y = arr
         end 
-    puts sum +2
+    sum +2
 end
-puts euler002

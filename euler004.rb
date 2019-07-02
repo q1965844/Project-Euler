@@ -1,14 +1,16 @@
 def multiplication(num)
-    i=0
+    i,count=0,0
+    puts num
     while i<num.count/2
-        if num[i] != num[num.count-i] 
-            istrue = false
-            istrue
+        if num[i] == num[num.count-i] 
+            puts num[i] + num[num.count-i]
+            count +=1
+        else
             break
         end  
         i +=1
     end
-    
+    istrue = count>=3? true:false
     istrue
 end
 
@@ -17,7 +19,7 @@ def euler004
     while a>100
         b=a
         while b>100
-            sum = a*b
+            sum = 906609
             str = sum.to_s.split(//)
             if(multiplication(str))
                 puts "gg"

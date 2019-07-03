@@ -1,33 +1,16 @@
-def multiplication(num)
-    i,count=0,0
-    puts num
-    while i<num.count/2
-        if num[i] == num[num.count-i] 
-            puts num[i] + num[num.count-i]
-            count +=1
-        else
-            break
-        end  
-        i +=1
-    end
-    istrue = count>=3? true:false
-    istrue
-end
-
 def euler004
-    a,b =999,999
-    while a>100
-        b=a
-        while b>100
-            sum = 906609
-            str = sum.to_s.split(//)
-            if(multiplication(str))
-                puts "gg"
-                puts str
+    max =0
+    (100..999).each do|i| 
+        (i..999).each do |j|
+            sum =i*j
+            str = sum.to_s
+            str_r =str.reverse
+            if str == str_r
+                if sum > max
+                    max = sum
+                end
             end
-            b-=1
         end
-        a -=1
     end
+    max
 end
-puts euler004

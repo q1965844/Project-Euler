@@ -1,5 +1,6 @@
 def remainder(number)
-    sum = (1..number).select{|item| number%item == 0}
+    n = 1...(Math.sqrt(number)).to_i
+    sum = n.select{|item| number%item == 0}
     sum
 end
 
@@ -10,14 +11,11 @@ def euler012
     loop do
         sum = temp+n
         temp =sum
-        break if remainder(sum).count >200
+        break if remainder(sum).count >500/2
         n+=1
     end
-    
-
-    puts sum,remainder(sum).count
+    sum
 end
-puts euler012
 
 
                          

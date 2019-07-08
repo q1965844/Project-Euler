@@ -28,4 +28,5 @@ def euler017
     ans = (1..1000).map{|i| NumSplit(i).join.size} 
     #(1..1000).each{|j| print ans[j],ans[j].join.size,"\n"} 
     sum = ans.reduce(:+)
+    sum 
 end

@@ -25,9 +25,9 @@ def run_all
       total += 1
       mo = f.match /(euler(\d+))\.rb/
       num = mo[2].to_i
-
+      
       if $target
-        next unless $target != num
+        next if $target != num
       end
 
       result = __send__(mo[1])

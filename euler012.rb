@@ -5,17 +5,17 @@ def remainder(number)
 end
 
 def euler012
-    n = 1
-    temp =0
+    n = 12000
     sum = 0
     loop do
-        sum = temp+n
-        temp =sum
-        break if remainder(sum).count >500/2
+        sum = (1 + n) * n / 2 
+        re = remainder(sum).count
+        break if re >250
         n+=1
     end
     sum
 end
 
+puts euler012
 
                          

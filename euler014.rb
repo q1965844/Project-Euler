@@ -1,8 +1,8 @@
 def euler014
     n= 100_0000
-    arr =[]
+    arr  =[]
     hist =[]
-    arr2 =0
+    ans =0
     max =0
     n.downto(n/2) do|i|
         x = i
@@ -16,11 +16,11 @@ def euler014
         #print arr,"\n"
         if arr.count >= max
             max = arr.count 
-            arr2 = init 
+            ans = init 
         end
         arr = []
     end
-    arr2
+    ans
 end 
 
 

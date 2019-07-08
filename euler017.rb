@@ -29,4 +29,3 @@ def euler017
     #(1..1000).each{|j| print ans[j],ans[j].join.size,"\n"} 
     sum = ans.reduce(:+)
 end
-puts euler017

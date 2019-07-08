@@ -11,4 +11,3 @@ def euler020
     ans = arr.reduce(:+)
     ans
 end
-puts euler020

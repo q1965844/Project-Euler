@@ -16,6 +16,4 @@ def euler012
     sum
 end
 
-puts euler012
-
                          

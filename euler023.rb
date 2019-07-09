@@ -5,25 +5,24 @@ def number_divisors(n) #約数の総和を求める
   end
 
 def euler023
-    arr =[]
-    arr2 =[]
-    arr3 =[1]
+    abun_arr =[] # abun =abundant
+    abun_add_arr =[]
+    total =[1]
     hist =Array.new(23123,true)
     (2...23123).each do |i|
-        arr3 <<i
+        total <<i
         a=number_divisors(i)
         if a>i
-            arr << i
+            abun_arr << i
         end
     end
-    (0...arr.count).each do |i|
-        (i...arr.count).each do |j|
-            arr2 << arr[i] +arr[j] if hist [arr[i] +arr[j]] && arr[i] +arr[j]<23123
-            hist [arr[i] +arr[j]] =false if arr[i] +arr[j]<23123
+    (0...abun_arr.count).each do |i|
+        (i...abun_arr.count).each do |j|
+            c =abun_arr[i] +abun_arr[j]
+            abun_add_arr << c if hist [c] && c<23123
+            hist [c] =false if c<23123
         end
     end
-    ans = (arr3 -arr2)
+    ans = (total -abun_add_arr)
     ans.reduce(:+)
-
 end
-puts euler023
